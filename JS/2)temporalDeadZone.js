@@ -2,7 +2,12 @@
 
 // The Temporal Dead Zone refers to the period in the execution of a JavaScript program where a variable exists but cannot be accessed.
 
+// Here from line no : 7 to line no : 11 is considered as Temporal Dead Zone
+
 console.log(a)
+console.log("first")
+console.log("second")
+console.log("young")
 let a = 23;
 
 console.log(a)
