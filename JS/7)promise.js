@@ -88,3 +88,30 @@ async function consumePromiseFive() {
 }
 
 consumePromiseFive();
+
+const functionFetchFromAPI = (url) => {
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        } else {
+          return response.json();
+        }
+      })
+      .then((data) => {
+        resolve(data);
+      })
+      .catch((err) => reject(err));
+  });
+};
+
+const apiURL = "https://jsonplaceholder.typicode.com/todos/1";
+
+functionFetchFromAPI(apiURL)
+  .then((data) => {
+    console.log("Data received:", data);
+  })
+  .catch((error) => {
+    console.error("Error 1:", error);
+  });
