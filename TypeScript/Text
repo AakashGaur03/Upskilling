@@ -1,0 +1,18 @@
+- Typescript is all about Type Safety
+
+What TypeScript does
+-- Static Checking
+means whenever we are writing the code the parser of the language or syntax is constantly analzyed by the IDE
+
+We write code in TS that code is converted into JS
+
+TS is a evelopment tool
+codes still runs in JS
+
+Types in TS
+Number,String,Boolean,Null,Undefined,Void,Object,Array,Tuples,etc
+Any,Never,unknown,noImplicitAny
+
+any basically means turn of the type checking
+
+let variableName: type = value
