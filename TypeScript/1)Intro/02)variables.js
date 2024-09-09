@@ -18,3 +18,11 @@ userId3.toFixed(2);
 // boolean
 var isLoggedIn = true;
 console.log(isLoggedIn);
+// Here automatically it is any we should prefer setting its type
+// any basically means turn of the type checking
+// let hero;
+var hero;
+function getHero() {
+    return "thor";
+}
+hero = getHero();
