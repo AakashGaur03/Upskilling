@@ -29,6 +29,9 @@ Array.prototype.sayDavid = function () {
   console.log(`David from Arrays`);
 };
 
+// Link for Hierarchy
+// https://excalidraw.com/#json=WqWp0j5qFRXnHZxq7AYS6,UJc5CyZkQYNZLZH4rXqZPw
+
 // Here myHeroes will have access but heroPower not because
 // Object is parent of array
 // Function --------------⬇️
