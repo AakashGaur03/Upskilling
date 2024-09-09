@@ -1,6 +1,7 @@
 // Singleton
 // Object.create
-
+// Single Instance: Only one instance is created.
+// Global Access: The same instance is accessible globally.
 // Object Literals
 
 const defineSymbol = Symbol("");
