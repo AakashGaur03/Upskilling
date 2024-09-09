@@ -9,7 +9,7 @@ type User = {
 
 const allUsers: User[] = [];
 
-// Array of Array
+// Array of Array of numbers
 const MLModels: number[][] = [
   [255, 255, 255],
   [1, 2, 3],
