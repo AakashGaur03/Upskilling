@@ -55,6 +55,7 @@ heroes.map(function (hero) {
 function consoleErr(errMsg) {
     console.log(errMsg);
 }
+// The never type represents values which are never observed. In a return type, this means that the function throws an exception or terminates execution of the program.
 function handleErr(errMsg) {
     throw new Error(errMsg);
 }

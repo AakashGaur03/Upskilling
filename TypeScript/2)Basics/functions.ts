@@ -74,6 +74,8 @@ function consoleErr(errMsg: string): void {
   console.log(errMsg);
 }
 
+// The never type represents values which are never observed. In a return type, this means that the function throws an exception or terminates execution of the program.
+
 function handleErr(errMsg: string): never {
   throw new Error(errMsg);
 }
