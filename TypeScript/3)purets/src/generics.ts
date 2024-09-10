@@ -5,7 +5,7 @@ function identityOne(val: boolean | number): boolean | number {
   return val;
 }
 
-// In this we can take number as a value and can return string That will be valid
+// In this we can take number as a value and can return string and that will be valid
 function identityTwo(val: any): any {
   return val;
 }
@@ -31,3 +31,15 @@ interface Bootle {
 }
 
 identityFour<Bootle>({ brand: "A", type: 2 });
+
+function getSearchProducts<T>(products: T[]): T {
+  // Do some DB
+  const myIndex = 3;
+  return products[myIndex];
+}
+
+const getMoreSearchProducts = <T>(products: T[]): T => {
+  // Do some DB
+  const myIndex = 5;
+  return products[myIndex];
+};
