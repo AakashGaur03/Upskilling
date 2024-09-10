@@ -43,3 +43,51 @@ const getMoreSearchProducts = <T>(products: T[]): T => {
   const myIndex = 5;
   return products[myIndex];
 };
+
+// function anotherFunction<T, U extends number>(
+//   valueOne: T,
+//   valueTwo: U
+// ): object {
+//   return { valueOne, valueTwo };
+// }
+// anotherFunction(3, 3.2);
+// anotherFunction("222", 3);
+// // anotherFunction(3, "3.2");   Gives Error
+
+interface Database {
+  connection: string;
+  username: string;
+  password: string;
+}
+
+function anotherFunction<T, U extends Database>(
+  valueOne: T,
+  valueTwo: U
+): object {
+  return { valueOne, valueTwo };
+}
+anotherFunction(3, {
+  connection: "connection",
+  username: "name",
+  password: "pass",
+});
+
+// Class Types in Generics
+
+interface Quiz {
+  name: string;
+  type: string;
+}
+interface Course {
+  name: string;
+  author: string;
+  subject: string;
+}
+
+class Sellable<T> {
+  public cart: T[] = [];
+
+  addToCart(product: T) {
+    this.cart.push(product);
+  }
+}
