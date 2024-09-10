@@ -13,7 +13,9 @@
 
 // we can write class in TS like this also we need to write readonly seprately rest we can write inside of constructor
 class User {
-  private _courseCount = 1;
+  //   private _courseCount = 1;
+  //   protected means can be accessed within same class and any class which inherits this class not outside of class
+  protected _courseCount = 1;
   private readonly country: string = "India";
   constructor(
     public email: string,
@@ -53,3 +55,11 @@ const dave = new User("dave@gmail.com", "dave");
 // private is only in TS
 
 // dave.deleteToken()
+
+class SubUser extends User {
+  isFamily: boolean = true;
+  changeCourseCount() {
+    // Property '_courseCount' is private and only accessible within class 'User'
+    this._courseCount = 4;
+  }
+}
